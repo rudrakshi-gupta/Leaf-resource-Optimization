@@ -3,26 +3,37 @@
 //Example - Cactus
 
 //Co-relation of computer resources to 5 bio-resources of cactus.
-// Water - Network
+// Water - Memory
 // Soil - Storage
-// Nutrients - Memory
+// Nutrients - Network
 // Sunlight - Processing Power
-// Climate/Temperature - Automation
+// Climate/Temperature - Management and Automation
 
 START
 Step 1 - Identify the component where scarcity occured in comparision to Threshhold array.
+Step 2 - Defining priority to different scarcity functions if occured together.
 // Declare functions for different scarcity.
-Step 2 - Network Scarcity. 
+Step 3 - Network Scarcity. 
     Declare function NetScarcity(), where it will command the storage of Neteork's work in Cache.
-    //It is similar to cactus storing water and nutrients within itself and uses it for a prolonged time.
-    Step 2.1 - Generate a thread with the highest priority.
-    Step 2.2 - Pass the expansion() command for memory Expansion if required.
-    Step 2.3 - Whatever work done on Network, store it in memory for faster retrival when there is a scarcity.
-Step 3 - Memory Scarcity. 
+    //It is similar to cactus storing nutrients within itself and uses it for a prolonged time.
+    Step 3.1 - Generate a thread with the highest priority.
+    Step 3.2 - Pass the expansion() command for memory Expansion if required.
+    Step 3.3 - Whatever work done on Network, store it in memory for faster retrival when there is a scarcity.
+Step 4 - Memory Scarcity. 
     Declare function MemScarcity(), where it will command the expansion of memory using storage.
-    //It is Similar to cactus seeking more nutrients from soil by expanding its roots deep within the soil.
-    Step 3.1 - Generate a thread with highest Priority.
-    Step 3.2 - Pass the expansion() command.
-Step 4 - Storage scarcity.
+    //It is Similar to cactus seeking more water and nutrients from soil by expanding its roots deep within the soil.
+    Step 4.1 - Generate a thread with highest Priority.
+    Step 4.2 - Pass the expansion() command.
+Step 5 - Storage scarcity.
     Declare function StoreScarcity(), where the work will be set to halt and either the user will be notified to scale their storage or the process of scaling will be automated.
-    //It is similar 
+    //It is similar to cactus in a way where cactus will grow bigger to store more.
+    Step 5.1 - Generate a thread with highest priority.
+    Step 5.2 - Check if automation of scalling can take place or not.
+    Step 5.3 - If cannot be automated, halt the process and notify the user.
+Step 6 - Processing Power
+    Declare function processingPowerScarcity(), where the management of processes takes place, the less important threads/processes are suspended and power management also takes place.
+    //It is similar to cactus growing in different climate//temperature.
+    Step 6.1 - Generate a thread with highest priority.
+    Step 6.2 - Suspending low proirity processes/tasks.
+    Step 6.3 - Power management if required.
+END
