@@ -1,0 +1,28 @@
+//Algorithm when scarcity of components occur
+//follows No Venation pattern of leaves
+//Example - Cactus
+
+//Co-relation of computer resources to 5 bio-resources of cactus.
+// Water - Network
+// Soil - Storage
+// Nutrients - Memory
+// Sunlight - Processing Power
+// Climate/Temperature - Automation
+
+START
+Step 1 - Identify the component where scarcity occured in comparision to Threshhold array.
+// Declare functions for different scarcity.
+Step 2 - Network Scarcity. 
+    Declare function NetScarcity(), where it will command the storage of Neteork's work in Cache.
+    //It is similar to cactus storing water and nutrients within itself and uses it for a prolonged time.
+    Step 2.1 - Generate a thread with the highest priority.
+    Step 2.2 - Pass the expansion() command for memory Expansion if required.
+    Step 2.3 - Whatever work done on Network, store it in memory for faster retrival when there is a scarcity.
+Step 3 - Memory Scarcity. 
+    Declare function MemScarcity(), where it will command the expansion of memory using storage.
+    //It is Similar to cactus seeking more nutrients from soil by expanding its roots deep within the soil.
+    Step 3.1 - Generate a thread with highest Priority.
+    Step 3.2 - Pass the expansion() command.
+Step 4 - Storage scarcity.
+    Declare function StoreScarcity(), where the work will be set to halt and either the user will be notified to scale their storage or the process of scaling will be automated.
+    //It is similar 
