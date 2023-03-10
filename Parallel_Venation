@@ -3,13 +3,13 @@
 // Define the tasks that need to be completed to optimize resource utilization
 
 //Co-relation of computer resources to 5 bio-resources of Grass.
-// Water - Processing Power
-// Soil - Storage
-// Nutrients - Memory
-// Sunlight - Network
-// Climate/Temperature - Management and Automation
+// Water - Processing Power - T1
+// Soil - Storage - T2
+// Nutrients - Memory - T3
+// Sunlight - Network - T4
+// Climate/Temperature - Management and Automation - T5
 
-1.Assign priorities to each task based on their importance and urgency. For example, Storage(soil) and Memory(nutrient) management may have a higher priority than other tasks.
+1.Assign priorities to each task based on their importance and urgency. For example, Processing Power(Water) and Storage(soil) may have a higher priority than other tasks.
 
 2.Sort the tasks based on their priority using a priority queue.
 
@@ -21,7 +21,7 @@
 
 6.Repeat steps 4-6 until all tasks have completed.
 
-Monitor the grass growth and nutrient levels regularly and adjust the management practices as needed to optimize the resource utilization of the grass.
+// Monitor the grass growth and nutrient levels regularly and adjust the management practices as needed to optimize the resource utilization of the grass.
 
 // --------------------------
 
