@@ -1,1 +1,25 @@
+class Task:
+    def __init__(self, name, priority):
+        self.name = name
+        self.priority = priority
 
+# Define the tasks and their priorities
+tasks = [
+    Task('T1', 1),
+    Task('T2', 2),
+    Task('T3', 3),
+    Task('T4', 4),
+    Task('T5', 5)
+]
+
+# Create a priority queue and add the tasks to it
+task_queue = queue.PriorityQueue()
+for task in tasks:
+    task_queue.put((task.priority, task))
+
+# Execute the tasks in order of their priority
+while not task_queue.empty():
+    _, task = task_queue.get()
+    print(f"Executing {task.name} with priority {task.priority}")
+    time.sleep(5) # Simulate task execution time
+    print(f"{task.name} completed")
