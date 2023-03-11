@@ -2,13 +2,6 @@
 //follows No Venation pattern of leaves
 //Example - Cactus
 
-//Co-relation of computer resources to 5 bio-resources of cactus.
-// Water - Memory
-// Soil - Storage
-// Nutrients - Network
-// Sunlight - Processing Power
-// Climate/Temperature - Management and Automation
-
 START
 Step 1 - Identify the component where scarcity occured in comparision to Threshhold array.
 Step 2 - Defining priority to different scarcity functions if occured together.
