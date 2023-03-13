@@ -21,17 +21,7 @@
 
 6.Repeat steps 4-6 until all tasks have completed.
 
-// Monitor the grass growth and nutrient levels regularly and adjust the management practices as needed to optimize the resource utilization of the grass.
 
-// --------------------------
-
-Input:
-- tasks: a list of n tasks to be executed by the grass system
-- resources: a dictionary of m resources required by the tasks
-- available: a dictionary of the total amount of each resource available at the time the tasks are scheduled for execution
-
-Output:
-- A schedule of the tasks, specifying the order in which they will be executed and the resources they will use
 
 Algorithm:
 
@@ -55,5 +45,5 @@ Algorithm:
 
 7. Repeat steps 1-6 until all tasks have been executed.
 
-Output the schedule of tasks and the resources allocated to each task at the time of execution.
+Output - The schedule of tasks and the resources allocated to each task at the time of execution.
 
