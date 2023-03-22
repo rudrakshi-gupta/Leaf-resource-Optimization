@@ -1,0 +1,49 @@
+// Priority scheduling algorithm for resource optimization (of grass):
+
+// Define the tasks that need to be completed to optimize resource utilization
+
+//Co-relation of computer resources to 5 bio-resources of Grass.
+// Water - Processing Power - T1
+// Soil - Storage - T2
+// Nutrients - Memory - T3
+// Sunlight - Network - T4
+// Climate/Temperature - Management and Automation - T5
+
+1.Assign priorities to each task based on their importance and urgency. For example, Processing Power(Water) and Storage(soil) may have a higher priority than other tasks.
+
+2.Sort the tasks based on their priority using a priority queue.
+
+3.Start executing the task with the highest priority.
+
+4.If a new task arrives with a higher priority than the currently executing task, then pause the current task and execute the new task.
+
+5.Resume the paused task when the higher-priority task completes.
+
+6.Repeat steps 4-6 until all tasks have completed.
+
+
+
+Algorithm:
+
+1. For each task i in tasks, calculate its resource utilization as follows:
+   - resource_utilization[i] = sum(resources[i][j] for j in resources[i])
+
+2. Sort the tasks in descending order of their resource utilization.
+
+3. For each task i in tasks, calculate its priority as follows:
+   - For each resource j in resources[i]:
+     - If the total amount of resource j available is less than the sum of the requirements of all tasks that require resource j, set the priority of task i to the minimum of the priorities of all tasks that require resource j.
+   - If task i does not require any resources in short supply, set the priority of task i to the maximum priority of all other tasks.
+
+4. For each task i in tasks, calculate its fair share as follows:
+   - For each resource j in resources[i]:
+     - fair_share[i][j] = resources[i][j] / available[j]
+
+5. Sort the tasks by their priority level, with ties broken using their fair share.
+
+6. For each task i in tasks, execute the task and allocate the required resources at the time it is scheduled for execution.
+
+7. Repeat steps 1-6 until all tasks have been executed.
+
+Output - The schedule of tasks and the resources allocated to each task at the time of execution.
+

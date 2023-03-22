@@ -1,0 +1,17 @@
+Pinnate venation and priority scheduling, the branching and interconnected network of veins in pinnate venation resembles the way 
+that priority scheduling algorithms allocate resources to different tasks. Just as the veins in a leaf form a network that distributes water and nutrients
+to all parts of the plant, a priority scheduling algorithm allocates resources such as processing time, memory, and I/O bandwidth to different tasks in order 
+to ensure that they are completed in the most efficient and effective way possible.
+In both cases, the network structure enables a more efficient and robust distribution of resources, with higher-priority tasks receiving more resources
+and lower-priority tasks receiving less. 
+
+
+1. Define a list of tasks, with each task represented as a dictionary containing the name, priority, and execution time of the task.
+2. Define a custom sort function called "sort_tasks" that prioritizes the task with the maximum priority value. 
+If the priority value is 100, it will return an infinite value to ensure that it is always executed first.
+Otherwise, it will return the priority value of the task.
+3. Sort the list of tasks in descending order of priority, with the task with the maximum priority value first. 
+This is done using the built-in "sort" functionand passing in the "sort_tasks" function as the key argument to 
+perform the custom sorting.
+4. Execute each task in turn by iterating over the sorted list of tasks and printing out the name, priority, and 
+execution time of the task. It also simulates the execution time of each task using the "time.sleep" function.

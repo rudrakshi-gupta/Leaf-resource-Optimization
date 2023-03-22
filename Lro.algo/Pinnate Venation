@@ -1,0 +1,50 @@
+ //Reticulate venation and priority scheduling, we could say that the branching and interconnected network of veins in reticulate venation resembles the way that 
+ priority scheduling algorithms allocate resources to different tasks. Just as the veins in a leaf form a network that distributes water and nutrients to all parts 
+ of the plant, a priority scheduling algorithm allocates resources such as processing time, memory, and I/O bandwidth to different tasks in order to ensure that they 
+ are completed in the most efficient and effective way possible.
+
+//one task has maximum priority while all other tasks have equal priority
+
+tasks = [
+    {'name': 'Task B', 'priority': 5, 'time': 3},
+    {'name': 'Task C', 'priority': 5, 'time': 2},
+    {'name': 'Task D', 'priority': 5, 'time': 4},
+    {'name': 'Task E', 'priority': 5, 'time': 6},
+    {'name': 'Task F', 'priority': 5, 'time': 2},
+    {'name': 'Task G', 'priority': 5, 'time': 3},
+    {'name': 'Task H', 'priority': 5, 'time': 5},
+    {'name': 'Task I', 'priority': 5, 'time': 2},
+    {'name': 'Task J', 'priority': 5, 'time': 4},
+    {'name': 'Task K', 'priority': 5, 'time': 1},
+    {'name': 'Task L', 'priority': 5, 'time': 3},
+    {'name': 'Task M', 'priority': 5, 'time': 2},
+    {'name': 'Task N', 'priority': 5, 'time': 4},
+    {'name': 'Task O', 'priority': 5, 'time': 5},
+    {'name': 'Task P', 'priority': 5, 'time': 3},
+    {'name': 'Task Q', 'priority': 5, 'time': 2},
+    {'name': 'Task R', 'priority': 5, 'time': 4},
+    {'name': 'Task S', 'priority': 5, 'time': 1},
+    {'name': 'Task T', 'priority': 5, 'time': 3},
+    {'name': 'Task U', 'priority': 5, 'time': 2},
+    {'name': 'Task V', 'priority': 5, 'time': 4},
+    {'name': 'Task W', 'priority': 5, 'time': 5},
+    {'name': 'Task X', 'priority': 5, 'time': 3},
+    {'name': 'Task Y', 'priority': 5, 'time': 2},
+    {'name': 'Task Z', 'priority': 5, 'time': 4},
+    {'name': 'Task Max', 'priority': 100, 'time': 10},
+]
+
+# Define a custom sort function to prioritize the task with maximum priority value
+def sort_tasks(task):
+    if task['priority'] == 100:
+        return float('inf')
+    else:
+        return task['priority']
+
+# Sort the list of tasks by priority value, with the task with maximum priority first
+tasks.sort(key=sort_tasks, reverse=True)
+
+# Execute each task in turn
+for task in tasks:
+    print(f"Executing task {task['name']} with priority {task['priority']} and execution time {task['time']}")
+    time.sleep(task['time'])  # Simulate the execution time of the task

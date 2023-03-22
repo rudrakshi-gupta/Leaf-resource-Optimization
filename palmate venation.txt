@@ -1,0 +1,26 @@
+Algorithm:
+
+Start
+
+1)Initialize the ready queue to be empty.
+
+2)Loop until all processes have completed:
+a. Check the arrival time of all processes.
+b. If a process has arrived, add it to the ready queue.
+c. If the CPU is idle and there are processes in the ready queue:
+i. Sort the ready queue by priority, with the highest priority process at the front.
+ii. Remove the highest priority process from the front of the ready queue and execute it.
+iii.Initialize the ready queue to be empty for the veins in the midrib.
+iv. Loop until all processes have completed:
+	a. Check the arrival time of all processes(veins).
+	b. If a process has arrived, add it to the ready queue.
+	c. If the CPU is idle and there are processes in the ready queue:
+		i. Sort the ready queue by priority, with the highest priority process at the front.
+		ii. Remove the highest priority process from the front of the ready queue and execute it.
+		iii. If a process with higher priority than the currently executing process arrives, preempt the CPU and add the currently executing process back to the ready queue.
+		iv. If the currently executing process finishes executing, mark it as complete and remove it from the system.
+	d. If the CPU is not idle and a higher-priority process arrives, preempt the CPU and add the currently executing process back to the ready queue.
+
+3)Calculate and output the average waiting time, turnaround time, and response time for all processes.
+
+END.
