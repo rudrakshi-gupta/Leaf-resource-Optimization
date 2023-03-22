@@ -10,5 +10,11 @@ public class Leaf{
         //if any of data[i]<threshold[i] (Scarcity)
         noVenation(data,threshold);
         //calling the noVenation-scarcity resource Optimization
+
+        //if balanced
+        parallelVenation();
+        //calling the parallel resource Optimization
+
+        //
     }
 }
