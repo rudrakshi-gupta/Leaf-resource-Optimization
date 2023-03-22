@@ -17,7 +17,7 @@ protected class noVenation{
         checkP(net,storage,mem,pp,ma,t);
     }
 
-    private boolean checkForEnoughMemory(){
+    private boolean checkForEnoughMemory(int t){
         // // Windows
         // #include "windows.h"
         // MEMORYSTATUSEX memInfo;
@@ -27,6 +27,9 @@ protected class noVenation{
         // DWORDLONG totalVirtualMem = memInfo.ullTotalPageFile;
         // // total physical mem
         // DWORDLONG totalPhysMem = memInfo.ullTotalPhys;
+        // if(mem<t){
+        //     return false;
+        // }
 
         //linux
         // #include "sys/types.h"
@@ -44,13 +47,21 @@ protected class noVenation{
         // long long totalPhysMem = memInfo.totalram;
         // //Multiply in next statement to avoid int overflow on right hand side...
         // totalPhysMem *= memInfo.mem_unit;
+        // if(mem<t){
+        //     return false;
+        // }
 
+        // return true;
+
+    }
+    private boolean checkForEnoughStorage(int t){
+        
     }
 
     private void checkP(self,long net,long storage,long mem,long pp,long ma,long[] t){
         int[] priorityArray = {3,1,2,4,5};
         if(net<t[0]){
-            boolean em = checkForEnoughMemory();//--->(mem<t[2])
+            boolean em = checkForEnoughMemory(t[2]);//--->(mem<t[2])
             if(!em){
                 memScarcity();
             }
@@ -79,7 +90,7 @@ protected class noVenation{
         storingTasksInMemory();
     }
     private void memScarcity(){
-        boolean es = checkForEnoughStorage();//--->(storage<t[1])
+        boolean es = checkForEnoughStorage(t[1]);//--->(storage<t[1])
         if(!es){
             storeScarcity();
         }
