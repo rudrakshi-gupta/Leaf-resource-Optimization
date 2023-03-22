@@ -55,6 +55,13 @@ protected class noVenation{
 
     }
     private boolean checkForEnoughStorage(int t){
+        //Windows
+        // File file = new File("E:\\");
+          
+        // double size = file.getFreeSpace() / (1024.0 * 1024 * 1024);
+        // System.out.printf( "%.3f GB\n", size);
+    }
+    private boolean checkForAutomation(){
         
     }
 
