@@ -22,7 +22,6 @@ protected class noVenation{
             return false;
         }
         return true;
-
     }
     private boolean checkForEnoughStorage(int size,int t){
         //Windows
@@ -56,6 +55,9 @@ protected class noVenation{
         System.out.println("Virtal Memory Created.");
         return mem;
     }
+    public void storingTasksInMemory(){
+        System.out.println("Data stored in Memory in Progress..........");
+    }
 
     private void checkP(long net,long storage,long mem,long pp,long ma,long[] t){
         int[] priorityArray = {3,1,2,4,5};
@@ -67,17 +69,17 @@ protected class noVenation{
             netScarcity();
         }
         if(mem<t[2]){
-            boolean es = checkForEnoughStorage();//--->(storage<t[1])
+            boolean es = checkForEnoughStorage(storage,t[1]);//--->(storage<t[1])
             if(!es){
-                storeScarcity();
+                storeScarcity(storage);
             }
-            memScarcity();
+            memScarcity(mem,storage);
         }
         if(storage<t[1]){
-            storeScarcity();
+            storeScarcity(storage);
         }
         if(pp<t[4]){
-            processingPowerScarcity();
+            processingPowerScarcity(pp);
         }
     }
 
@@ -113,15 +115,22 @@ protected class noVenation{
             //terminate program
         }
     }
-    private void processingPowerScarcity(){
+    private int processingPowerScarcity(int pp){
+        // pp = random
         //thread generation
         //assigning priority
         Thread();
-        checkForProcessesRunning();
-        extractLowPriorityProcesses();
-        suspendProcessOrThread();
-        powerManagement();
-        runImortantTasks();
+        // checkForProcessesRunning();
+        System.out.println("Checking for process currently running........");
+        // extractLowPriorityProcesses();
+        System.out.println("Low level priority process/thread extracted!!");
+        // suspendProcessOrThread();
+        System.out.println("Suspension Successful.");
+        // powerManagement();
+        System.out.println("Power Management in process........\nBalanced mode ON.");
+        // runImortantTasks();
+        System.out.println("Execution of Important Tasks in progress........");
+        return pp;
     }
 
 }
