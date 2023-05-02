@@ -10,13 +10,14 @@ public class Leaf {
                 "Storage",
                 "Network","Management"
         };
+        System.out.println("abh");
         int[] priority = new int[5];
 
         int x = 0;
         boolean scarcity = false;
         boolean parallel = false;
 
-        System.out.println("Specify the needs of the below computing resourcres accordnidngly\n"+"Scarcity = 0\n"+"Abundance = 1\n"+"Thresold = 2\n");
+        System.out.println("Specify the needs of the below computing resourcres accordnidngly\n"+"Scarcity = 0\n"+"Abundance = 1\n"+"Threshold = 2\n");
         for(int i=0;i< arr.length; i++)
         {
             System.out.print(arr[i]+" : ");
@@ -35,13 +36,12 @@ public class Leaf {
             long[] a = {1,2,3,4,5};
             long[] b = {1,2,3,4,5};
             noVenation foo = new noVenation(a,b);
+             System.exit(0);
         }
-        System.out.println(x);
+        // // System.out.println(x);
 
-        System.out.println(parallel);
-
-        // Parallelvenation manager = new Parallelvenation();
-        if(parallel){
+        // System.out.println(parallel);
+else if(parallel){
             Parallelvenation manager = new Parallelvenation();
             Random rand = new Random();
             for (int i = 0; i < 10; i++) {
@@ -52,8 +52,9 @@ public class Leaf {
             }
 
             manager.executeTasks();
+            System.exit(0);
         }
-
+else {
          int max = priority[0];
          for(int i = 1; i < priority.length; i++) {
              if (priority[i] > max) {
@@ -65,11 +66,13 @@ public class Leaf {
                  count++;
             }
          }
-        if(count==4)
+        }
+     if(count==4)
         {
             pinnate n = new pinnate();
         }
-        else{
+    
+      else {
              palmateAlgo m = new palmateAlgo();
             // Create a list of tasks with different priorities
             List<nonPreemptive> taskList1 = new ArrayList<>();
